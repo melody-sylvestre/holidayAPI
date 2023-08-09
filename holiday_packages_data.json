@@ -1,0 +1,74 @@
+{
+ "data": [
+        {
+            "Title": "Getaway in Antigua",
+            "Location": "Antigua and Barbuda",
+            "Description": "Forget all your worries in dreamy Antigua. Spend a week relaxing on the beach and exploring this Caribbean gem.",
+            "PriceInGBPPerPerson": 500,
+            "Duration": "7 nights",
+            "Tags": [
+                "Caribbean", 
+                "Beach Holiday",
+                "Sunny"
+            ],
+            "BannerImageUnsplashID": "9CJTrF-HnlU"
+        }, 
+        {
+            "Title": "Colourful city break in Lisbon",
+            "Location": "Lisbon",
+            "Description": "Discover the wonders of the City of Seven Hills. Immerse yourself in vibrant Lisbon, explore its rich history and don't forget to eat delicious pastéis de nata.",
+            "PriceInGBPPerPerson": 250,
+            "Duration": " 3 nights",
+            "Tags": [
+                "Europe", 
+                "City break",
+                "Sunny",
+                "Culture break"
+            ],
+            "BannerImageUnsplashID": "8Nd3GY8z-iU"
+        },
+        {
+            "Title": "Incredible Chile",
+            "Location": "Chile",
+            "Description": "This is the start of your new adventure. Come marvel at the incredibly varied Chilean landscapes, from colourful cities, to otherworldly deserts and majestic  mountains!",
+            "PriceInGBPPerPerson": 1500,
+            "Duration": " 20 nights",
+            "Tags": [
+                "South America", 
+                "Road Trip",
+                "Nature",
+                "Unique"
+            ],
+            "BannerImageUnsplashID": "QaWRyEdlffY"
+        }, 
+        {
+            "Title": "Beautiful Guadeloupe",
+            "Location": "Guadeloupe",
+            "Description": "Fabulous landscapes await you in sunny Guadeloupe. This Caribbean archipelago will surprise you with its incredibly diverse sights. Marveling at waterfalls, hiking in the rainforest, snorkeling in its marine reserve or just lounging on one of its 270 beaches: there is something for everyone in idyllic Guadeloupe!",
+            "PriceInGBPPerPerson": 700,
+            "Duration": " 10 nights",
+            "Tags": [
+                "Caribbean", 
+                "Sunny",
+                "Nature",
+                "Beach Holiday",
+                "Unique"
+            ],
+            "BannerImageUnsplashID": "y32dchsQ-Gk"
+        }, 
+        {
+            "Title": "Luxury beach holiday in Maldives",
+            "Location": "Maldives",
+            "Description": "Experience the ultimate luxury beach holiday in Maldives! Stay in our exclusive all-included 5-stars resort island! Enjoy a gastronomic dinner by sunser on one of our secluded beaches. Unwind with one of our fabulous spa treatments. Feeling adventurous? Scuba diving and wind-surfing are some of the numerous activities we propose! What are you waiting for?",
+            "PriceInGBPPerPerson": 2000,
+            "Duration": " 7 nights",
+            "Tags": [
+                "Asia", 
+                "Sunny",
+                "Beach Holiday",
+                "Luxury"
+            ],
+            "BannerImageUnsplashID": "uWpggIb3iHs"
+        }
+    ]
+}
