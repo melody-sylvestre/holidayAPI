@@ -1,23 +1,20 @@
 import {Request, Response} from 'express' 
 import { bannerItem } from '../interfaces'
-const {ObjectID } = require('mongodb')
-
-const getHolidayPackagesCollection = require('../db.ts')
 const UNSPLASH_ACCESS_KEY = require('../accessKey')
-
-// import bannerItem object form interfaces.ts
+const { getHolidayPackagesCollection } = require('../db')
 
 const getRandomHolidayPackageForBanner = async (request:Request, response:Response) => {
-    const holidayPackagesCollection = getHolidayPackagesCollection()
-    const randomHolidayPackage = await holidayPackagesCollection.aggregate([{$sample: {size:1}}])   
+    const holidayPackagesCollection = await getHolidayPackagesCollection()
+    const holidayPackageDataFromDB = await holidayPackagesCollection.aggregate([ { $sample: { size: 1 } } ]).toArray()
+    const randomHolidayPackage = holidayPackageDataFromDB[0]
 
     // validate randomHolidayPackage -> should have a BannerImageUnsplashID + some other stuff
  
-    // should be in a try catch in order to catch potential issues with API
-    const unsplashData = await fetch(`https://api.unsplash.com/photos/{randomHolidayPackage.BannerImageUnsplashID}`, {
+   // should be in a try catch in order to catch potential issues with API
+    const unsplashData = await fetch(`https://api.unsplash.com/photos/${randomHolidayPackage.BannerImageUnsplashID}`, {
         method: 'GET',
         headers: {
-            "Authorization": `Client-ID {UNSPLASH_ACCESS_KEY}`
+            "Authorization": `Client-ID ${UNSPLASH_ACCESS_KEY}`
         }
     })
     const photoDetails = await unsplashData.json()
@@ -27,7 +24,7 @@ const getRandomHolidayPackageForBanner = async (request:Request, response:Respon
         PriceInGBPPerPerson: randomHolidayPackage.PriceInGBPPerPerson,
         BannerImageUrl: photoDetails.urls.regular,
         Username: photoDetails.user.name, 
-        BannerPortfolioUrl: photoDetails.user.portfolio_url
+        BannerPortfolioUrl: photoDetails.user.links.html
     }
     //validate bannerItem
     

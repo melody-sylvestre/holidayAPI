@@ -1,11 +1,9 @@
-const MongoClient = require('mongodb')
-const mongoURL = "mongodb://root:password@localhost;27017"
+import { MongoClient } from 'mongodb'
 
-const getHolidayPackagesCollection = async () => {
+const mongoURL = "mongodb://root:password@localhost:27017"
+
+export const getHolidayPackagesCollection = async () => {
     const connection = await MongoClient.connect(mongoURL)
-    const holidayPackagesCollection = connection.db('holidayDreamsDB').collection('holidayPackages')
-    
-    return holidayPackagesCollection
+    return connection.db('holidayDreamsDB').collection('holidayPackages')
 }
 
-module.exports = getHolidayPackagesCollection
