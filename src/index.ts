@@ -1,5 +1,5 @@
 const express = require('express')
-const getRandomHolidayPackageForBanner = require('./Controllers/getRandomHolidayPackageForBanner')
+import { getRandomHolidayPackageForBanner } from './Controllers/getRandomHolidayPackageForBanner'
 
 const app = express()
 const port = 4000

@@ -1,4 +1,4 @@
-export type bannerItem = {
+export interface bannerItem {
     Title: string 
     PriceInGBPPerPerson: number
     BannerImageUrl: string

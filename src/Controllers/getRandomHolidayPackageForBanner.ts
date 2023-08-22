@@ -1,7 +1,7 @@
 import {Request, Response} from 'express' 
 import { bannerItem } from '../interfaces'
-const UNSPLASH_ACCESS_KEY = require('../accessKey')
-const { getHolidayPackagesCollection } = require('../db')
+import { UNSPLASH_ACCESS_KEY } from '../accessKey'
+import { getHolidayPackagesCollection } from '../db'
 
 const getRandomHolidayPackageForBanner = async (request:Request, response:Response) => {
     const holidayPackagesCollection = await getHolidayPackagesCollection()
@@ -36,4 +36,4 @@ const getRandomHolidayPackageForBanner = async (request:Request, response:Respon
     response.status(200).json(APIResponse)
 }
 
-module.exports = getRandomHolidayPackageForBanner
+export { getRandomHolidayPackageForBanner }
